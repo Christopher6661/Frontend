@@ -1,0 +1,29 @@
+<ion-header no-border>
+  <ion-toolbar color="purple">
+
+    <ion-title><h1>Menú de inicio</h1></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<ion-list>
+
+  <ion-item *ngFor="let c of componentes | async"
+            [routerLink]="c.redirectTo" detail>
+    <ion-icon slot="start"
+              [name]="c.icon"
+              color="orange">
+    </ion-icon>
+    <ion-label>{{ c.name }}</ion-label>
+  </ion-item>
+
+</ion-list>
+
+</ion-content>
+
+<ion-footer no-border>
+  <ion-toolbar color="purple">
+    <ion-title><h3>Hecho por christopher©</h3></ion-title>
+  </ion-toolbar>
+</ion-footer>

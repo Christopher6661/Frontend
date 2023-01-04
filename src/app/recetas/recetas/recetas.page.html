@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="warning">
+
+    <ion-buttons slot="start">
+      <ion-back-button text="Volver"defaultHref="/" icon="arrow-undo-circle-outline"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title><h1>RECETAS</h1></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content mode="ios" [fullscreen]="true">
+<ion-list>
+  <ion-item *ngFor="let receta of recetas let i=index">
+
+    <ion-buttons side="start" slot="end">
+      <ion-button color="warning" (click)="borrar(receta,i)">
+        <ion-icon name="trash-outline" ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons side="start" slot="end">
+      <ion-button color="warning" (click)="editar(receta)">
+        <ion-icon name="pencil-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-label color="warning">{{ receta.id }}</ion-label>
+      <ion-label color="warning">{{ receta.categoria }}</ion-label>
+  </ion-item>
+</ion-list>
+
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button (click)="agregarRecetas()" color="warning">
+    <ion-icon name="receipt-outline"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="warning"><h1>Recetas</h1></ion-toolbar>
+</ion-footer>

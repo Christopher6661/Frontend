@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar color="success">
+
+    <ion-buttons slot="start">
+      <ion-back-button text="Volver" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Editar Postre</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form #Formulario="ngForm" (ngSubmit)="guardar()">
+    <ion-item>
+      <ion-label position="floating"><h2>Descripción</h2></ion-label>
+      <ion-input type="text"
+                 placeholder="Ingresa la descripción"
+                 [(ngModel)]="postres.descripcion"
+                 name="Categoria"
+                 required>
+      </ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating"><h2>Ingredientes</h2></ion-label>
+      <ion-input type="text"
+                 placeholder="Ingresa los ingredientes"
+                 [(ngModel)]="postres.ingredientes"
+                 name="ingredientes"
+                 required>
+      </ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating"><h2>Tiempo de preparación</h2></ion-label>
+      <ion-input type="text"
+                 placeholder="Ingresa el tiempo de preparación"
+                 [(ngModel)]="postres.tiempo_preparacion"
+                 name="tiempo_preparacion"
+                 required>
+      </ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating"><h2>preparación</h2></ion-label>
+      <ion-input type="text"
+                 placeholder="Ingresa la preparación"
+                 [(ngModel)]="postres.preparacion"
+                 name="preparacion" 
+                 required>
+      </ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating"><h2>Categoria</h2></ion-label>
+      <ion-input type="text"
+                 placeholder="Ingresa la categoria"
+                 [(ngModel)]="postres.id_categoria"
+                 name="categoria"
+                 required>
+      </ion-input>
+    </ion-item>
+
+    <ion-button type="submit"
+                color="warning"
+                expand="block">
+    Guardar cambios
+    </ion-button>
+  </form>
+
+</ion-content>

@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="danger">
+
+    <ion-buttons slot="start">
+      <ion-back-button text="Volver" defaultHref="/" icon="arrow-undo-circle-outline"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title><h3>PLATOS FUERTES</h3></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content mode="ios" [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let platofuerte of platosfuertes let i=index">
+
+      <ion-buttons side="start" slot="end">
+        <ion-button color="danger" (click)="borrar(platofuerte,i)">
+          <ion-icon name="trash-outline" ></ion-icon>
+        </ion-button>
+      </ion-buttons>
+
+      <ion-buttons side="start" slot="end">
+        <ion-button color="danger" (click)="editar(platofuerte)">
+          <ion-icon name="pencil-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+        <ion-label color="danger" [routerLink]="'/mostrar-platofuerte/' + platofuerte.id">{{platofuerte.descripcion}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="agregarPlatosfuertes()" color="danger">
+      <ion-icon name="fast-food-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="danger"><h2>Platos Fuertes</h2></ion-toolbar>
+</ion-footer>

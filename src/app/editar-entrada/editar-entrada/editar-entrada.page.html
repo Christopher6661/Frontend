@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+
+    <ion-buttons slot="start">
+      <ion-back-button text="Volver" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Editar Entrada</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<form #Formulario="ngForm" (ngSubmit)="guardar()">
+  <ion-item>
+    <ion-label position="floating"><h2>descripcion</h2></ion-label>
+    <ion-input type="text"
+               placeholder="Ingresa la descripción"
+               [(ngModel)]="entradas.descripcion"
+               name="Categoria"
+               required>
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating"><h2>ingredientes</h2></ion-label>
+    <ion-input type="text"
+               placeholder="Ingresa los ingredientes"
+               [(ngModel)]="entradas.ingredientes"
+               name="ingredientes"
+               required>
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating"><h2>tiempo_preparacion</h2></ion-label>
+    <ion-input type="text"
+               placeholder="Ingresa el tiempo de preparación"
+               [(ngModel)]="entradas.tiempo_preparacion"
+               name="tiempo_preparacion"
+               required>
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating"><h2>preparacion</h2></ion-label>
+    <ion-input type="text"
+               placeholder="Ingresa la preparación"
+               [(ngModel)]="entradas.preparacion"
+               name="preparacion" 
+               required>
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating"><h2>id_categoria</h2></ion-label>
+    <ion-input type="text"
+               placeholder="Ingresa la categoria"
+               [(ngModel)]="entradas.id_categoria"
+               name="categoria"
+               required>
+    </ion-input>
+  </ion-item>
+
+  <ion-button type="submit"
+              color="success"
+              expand="block">
+  Guardar cambios
+  </ion-button>
+</form>
+</ion-content>

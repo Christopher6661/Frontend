@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="success">
+
+    <ion-buttons slot="start">
+      <ion-back-button text="Volver" defaultHref="/" icon="arrow-undo-circle-outline"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>{{postre?.descripcion}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-img src="../../../assets/postres.jpg"></ion-img>
+    <ion-card-content>{{ postre?.descripcion }}</ion-card-content> 
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>Ingredientes: {{ postre?.ingredientes }}</ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>Tiempo de preparción: {{ postre?.tiempo_preparacion }}</ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>Preparación: {{ postre?.preparacion}}</ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>Cegoria: {{ postre?.id_categoria }}</ion-card-content>
+  </ion-card>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="success"><h2>Postres</h2></ion-toolbar>
+</ion-footer>

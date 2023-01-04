@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="success">
+
+    <ion-buttons slot="start">
+      <ion-back-button text="Volver" defaultHref="/" icon="arrow-undo-circle-outline"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title><h1>POSTRES</h1></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content mode="ios" [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let postre of postres let i=index">
+
+      <ion-buttons side="start" slot="end">
+        <ion-button color="success" (click)="borrar(postre,i)">
+          <ion-icon name="trash-outline" ></ion-icon>
+        </ion-button>
+      </ion-buttons>
+
+      <ion-buttons side="start" slot="end">
+        <ion-button color="success" (click)="editar(postre)">
+          <ion-icon name="pencil-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+        <ion-label color="success" [routerLink]="'/mostrar-postre/' + postre.id">{{postre.descripcion}}</ion-label>
+    </ion-item>
+  </ion-list>
+  
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="agregarPostres()" color="success">
+      <ion-icon name="ice-cream-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="success"><h2>Postres</h2></ion-toolbar>
+</ion-footer>

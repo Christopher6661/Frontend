@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+
+    <ion-buttons slot="start">
+      <ion-back-button text="Volver" defaultHref="/" icon="arrow-undo-circle-outline"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>{{entrada?.descripcion}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-card>
+      <ion-img src="../../../assets/entradas.jpg"></ion-img>
+      <ion-card-content>{{ entrada?.descripcion }}</ion-card-content> 
+    </ion-card>
+
+    <ion-card>
+      <ion-card-content>Ingredientes: {{ entrada?.ingredientes }}</ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-content>Tiempo de preparción: {{ entrada?.tiempo_preparacion }}</ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-content>Preparación: {{ entrada?.preparacion}}</ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-content>Cegoria: {{ entrada?.id_categoria }}</ion-card-content>
+    </ion-card>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="secondary"><h2>Entradas</h2></ion-toolbar>
+</ion-footer>

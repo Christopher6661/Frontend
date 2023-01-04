@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+
+    <ion-buttons slot="start">
+      <ion-back-button text="Volver" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Agregar entrada</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<ion-row>
+  <ion-card>
+    <ion-card-content>
+      <ion-label type="text" #id></ion-label>
+      <ion-input type="text" placeholder="Ingresa la descripción" #descripcion></ion-input>
+      <ion-input type="text" placeholder="Ingresa los ingredientes" #ingredientes></ion-input>
+      <ion-input type="text" placeholder="Ingresa el tiempo de preparación" #tiempo_preparacion></ion-input>
+      <ion-input type="text" placeholder="Ingresa la preparación" #preparacion></ion-input>
+      <ion-input type="text" placeholder="Ingresa la categoría" #id_categoria></ion-input>
+
+      <ion-button color="success" (click)="agregarNuevaEntrada(id, descripcion, ingredientes, tiempo_preparacion, preparacion, id_categoria)">Guardar</ion-button>
+      
+    </ion-card-content>
+  </ion-card>
+</ion-row>
+
+</ion-content>

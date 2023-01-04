@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="warning">
+
+    <ion-buttons slot="start">
+      <ion-back-button text="Volver" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>EDITAR RECETA</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form #formulario="ngForm" (ngSubmit)="guardar()">
+    <ion-item>
+      <ion-label position="floating">click aqui para editar</ion-label>
+      <ion-input type="text"
+                 placeholder="Escribe la nueva categoria"
+                 [(ngModel)]="receta.Categoria"
+                 name="Categoria"
+                 required>
+      </ion-input>
+    </ion-item>
+    <ion-button type="submit"
+                color="success"
+                expand="block"
+                shape="round"
+                [disabled]="formulario.invalid">
+     Aceptar
+    </ion-button>
+  </form>
+</ion-content>

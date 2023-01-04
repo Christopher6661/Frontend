@@ -1,0 +1,22 @@
+[
+    {
+        "icon": "receipt-outline",
+        "name": "Tipos de recetas",
+        "redirectTo": "/recetas"
+    },
+    {
+        "icon": "pizza-outline",
+        "name": "Entradas",
+        "redirectTo": "/entradas"
+    },
+    {
+        "icon": "fast-food-outline",
+        "name": "Platos fuertes",
+        "redirectTo": "/platosfuertes"
+    },
+    {
+        "icon": "ice-cream-outline",
+        "name": "Postres",
+        "redirectTo": "/postres"
+    }
+]

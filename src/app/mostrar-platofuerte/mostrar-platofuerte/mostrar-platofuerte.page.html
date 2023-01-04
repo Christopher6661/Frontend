@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="danger">
+
+    <ion-buttons slot="start">
+      <ion-back-button text="Volver" defaultHref="/" icon="arrow-undo-circle-outline"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>{{ platofuerte?.descripcion}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-img src="../../../assets/platofuerte.jpg"></ion-img>
+    <ion-card-content>{{ platofuerte?.descripcion }}</ion-card-content> 
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>Ingredientes: {{ platofuerte?.ingredientes }}</ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>Tiempo de preparción: {{ platofuerte?.tiempo_preparacion }}</ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>Preparación: {{ platofuerte?.preparacion}}</ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>Cegoria: {{ platofuerte?.id_categoria }}</ion-card-content>
+  </ion-card>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="danger"><h2>Platos Fuertes</h2></ion-toolbar>
+</ion-footer>

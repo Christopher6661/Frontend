@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar color="danger">
+
+    <ion-buttons slot="start">
+      <ion-back-button text="Volver" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Editar Plato Fuerte</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form #Formulario="ngForm" (ngSubmit)="guardar()">
+    <ion-item>
+      <ion-label position="floating"><h2>Descripción</h2></ion-label>
+      <ion-input type="text"
+                 placeholder="Ingresa la descripción"
+                 [(ngModel)]="platofuerte.descripcion"
+                 name="Categoria"
+                 required>
+      </ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating"><h2>Ingredientes</h2></ion-label>
+      <ion-input type="text"
+                 placeholder="Ingresa los ingredientes"
+                 [(ngModel)]="platofuerte.ingredientes"
+                 name="ingredientes"
+                 required>
+      </ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating"><h2>Tiempo de preparación</h2></ion-label>
+      <ion-input type="text"
+                 placeholder="Ingresa el tiempo de preparación"
+                 [(ngModel)]="platofuerte.tiempo_preparacion"
+                 name="tiempo_preparacion"
+                 required>
+      </ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating"><h2>preparación</h2></ion-label>
+      <ion-input type="text"
+                 placeholder="Ingresa la preparación"
+                 [(ngModel)]="platofuerte.preparacion"
+                 name="preparacion" 
+                 required>
+      </ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating"><h2>Categoria</h2></ion-label>
+      <ion-input type="text"
+                 placeholder="Ingresa la categoria"
+                 [(ngModel)]="platofuerte.id_categoria"
+                 name="categoria"
+                 required>
+      </ion-input>
+    </ion-item>
+  
+    <ion-button type="submit"
+                color="success"
+                expand="block">
+    Guardar cambios
+    </ion-button>
+  </form>
+
+</ion-content>

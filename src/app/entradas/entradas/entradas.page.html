@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+
+    <ion-buttons slot="start">
+      <ion-back-button text="Volver" defaultHref="/" icon="arrow-undo-circle-outline"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title><h1>ENTRADAS</h1></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content mode="md" [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let entrada of entradas let i=index">
+      
+      <ion-buttons side="start" slot="end">
+        <ion-button color="secondary" (click)="borrar(entrada,i)">
+          <ion-icon name="trash-outline" ></ion-icon>
+        </ion-button>
+      </ion-buttons>
+
+      <ion-buttons side="start" slot="end">
+        <ion-button color="secondary" (click)="editar(entrada)">
+          <ion-icon name="pencil-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+        <ion-label color="secondary" [routerLink]="'/mostrar-entrada/' + entrada.id">{{entrada.descripcion}}</ion-label>
+    </ion-item>
+  </ion-list>
+  
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="agregarEntradas()" color="secondary">
+      <ion-icon name="pizza-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="secondary"><h2>Entradas</h2></ion-toolbar>
+</ion-footer>
